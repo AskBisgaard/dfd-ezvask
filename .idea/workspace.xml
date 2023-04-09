@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c2ddcee-e4a2-40e7-9872-700f23171183" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DFD/EzVask/CustomerPlatformController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DFD/EzVask/Pickup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="initial_rest" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -103,7 +101,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="Interface" />
                       </list>
                     </value>
                   </entry>
