@@ -1,19 +1,18 @@
 package com.DFD.EzVask;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin
 public class CustomerPlatformController {
-    private static final String template = "Hello, %s!";
-
     @GetMapping("/")
     public String index() {
-        return new String("Schedule Pickup");
+        return "Schedule Pickup";
     }
-    @GetMapping("/pickup")
-    public Pickup pickup(@RequestParam(value = "name", defaultValue = "World") String name) {
-        return new Pickup(String.format(template, name));
+    @PostMapping(path = "/pickup", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public String pickup(@RequestBody String body) {
+        System.out.println(body);
+        return body;
     }
 }

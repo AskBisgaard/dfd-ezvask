@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { scheduled_pickup } from './scheduled-pickup';
-import {NgbDate, NgbDateAdapter, NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
+import { NgbDate, NgbDateAdapter, NgbDateStruct, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
+import { Observable, catchError, throwError } from 'rxjs';
+import { HttpErrorResponse, HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +10,17 @@ import {NgbDate, NgbDateAdapter, NgbDateStruct, NgbCalendar} from '@ng-bootstrap
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
-  title = 'customerplatform';
 
+export class AppComponent {
+  constructor(private http: HttpClient) {
+    this.http.get<String>('http://localhost:8080/').subscribe(response => {
+      debugger;
+      console.log(response);
+    });
+  } 
+
+  headers = { 'content-type': 'application/json'}
+  title = 'customerplatform';
   
   new_pickup: scheduled_pickup = {
     id: -1,
@@ -24,8 +34,8 @@ export class AppComponent {
   ];
 
   schedulePickup(schedule_pickup: scheduled_pickup): void {
-    console.log('Pickup: %dkg on %s', schedule_pickup.weight, schedule_pickup.pickup_date)
-    debugger;
+    console.log(JSON.stringify(schedule_pickup));
+    this.http.post<scheduled_pickup>('http://localhost:8080/pickup', JSON.stringify(schedule_pickup), { headers: this.headers });
   };
 
   cancelPickup(scheduled_pickup: scheduled_pickup): void {
