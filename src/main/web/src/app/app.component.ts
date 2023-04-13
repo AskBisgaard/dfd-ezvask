@@ -18,7 +18,7 @@ export class AppComponent {
     });
   }
 
-  scheduled_pickups:ScheduledPickup[] = [];
+  scheduledPickups:ScheduledPickup[] = [];
 
   headers = { 'content-type': 'application/json'}
   title = 'customerplatform';
@@ -37,20 +37,20 @@ export class AppComponent {
     });
   };
 
-  cancelPickup(scheduled_pickup: ScheduledPickup) {
-    console.log('Remove pickup: %d', scheduled_pickup.id)
-    this.http.delete(`http://localhost:8080/cancel/${scheduled_pickup.id}`).subscribe(response => {
+  cancelPickup(scheduledPickup: ScheduledPickup) {
+    console.log('Remove pickup: %d', scheduledPickup.id)
+    this.http.delete(`http://localhost:8080/cancel/${scheduledPickup.id}`).subscribe(response => {
       this.updatePickups(response);
     });
   };
 
   updatePickups(obj: Object) {
-    this.scheduled_pickups = [];
+    this.scheduledPickups = [];
 
     Object.entries(obj)
     .forEach(([key, value]) => {
       let pickup = value as ScheduledPickup;
-      this.scheduled_pickups.push(pickup);
+      this.scheduledPickups.push(pickup);
     });
   }
 }

@@ -6,12 +6,12 @@
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <ngb-datepicker #d id="pickup_date" type="date" [(ngModel)]="new_pickup.pickupDate"></ngb-datepicker>
+          <ngb-datepicker #d id="pickup_date" type="date" [(ngModel)]="newPickup.pickupDate"></ngb-datepicker>
         </div>
         <div class="col-6">
             <label for="weight" class="row">How much: </label>
-            <input id="weight" class="row" [(ngModel)]="new_pickup.weight" placeholder="0 kg">
-            <button type="button" class="row" (click)="schedulePickup(new_pickup)">Schedule pickup</button>
+            <input id="weight" class="row" [(ngModel)]="newPickup.weight" placeholder="0 kg">
+            <button type="button" class="row" (click)="schedulePickup(newPickup)">Schedule pickup</button>
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@
     <div class="vr"></div>
 
     <div class="container">
-      <ul class="list-group list-group-horizontal" *ngFor="let scheduled_pickup of scheduled_pickups">
+      <ul class="list-group list-group-horizontal" *ngFor="let scheduled_pickup of scheduledPickups">
         <li class="list-group-item flex-fill">
           {{scheduled_pickup.pickupDate.year}}-{{scheduled_pickup.pickupDate.month | number: '2.0-0'}}-{{scheduled_pickup.pickupDate.day | number: '2.0-0'}}
         </li>
