@@ -6,7 +6,7 @@
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <ngb-datepicker #d id="pickup_date" type="date" [(ngModel)]="new_pickup.pickup_date"></ngb-datepicker>
+          <ngb-datepicker #d id="pickup_date" type="date" [(ngModel)]="new_pickup.pickupDate"></ngb-datepicker>
         </div>
         <div class="col-6">
             <label for="weight" class="row">How much: </label>
@@ -21,7 +21,7 @@
     <div class="container">
       <ul class="list-group list-group-horizontal" *ngFor="let scheduled_pickup of scheduled_pickups">
         <li class="list-group-item flex-fill">
-          {{scheduled_pickup.pickup_date.year}}-{{scheduled_pickup.pickup_date.month | number: '2.0-0'}}-{{scheduled_pickup.pickup_date.day | number: '2.0-0'}}
+          {{scheduled_pickup.pickupDate.year}}-{{scheduled_pickup.pickupDate.month | number: '2.0-0'}}-{{scheduled_pickup.pickupDate.day | number: '2.0-0'}}
         </li>
         <li class="list-group-item flex-fill">{{scheduled_pickup.weight}}</li>
         <li class="list-group-item list-group-item-action list-group-item-danger" style="width: 150px;" (click)="cancelPickup(scheduled_pickup)">Cancel pickup</li>

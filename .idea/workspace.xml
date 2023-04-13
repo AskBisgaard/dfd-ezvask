@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2ddcee-e4a2-40e7-9872-700f23171183" name="Changes" comment="Calling server via Postman works, but not via Angular frontend. More investigation needed, but the IntelliJ debugger refuses to stop on breaks, and I've spent far too long trying to get it to work...">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DFD/EzVask/CORSFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DFD/EzVask/CustomerPlatformController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DFD/EzVask/CustomerPlatformController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DFD/EzVask/EzVaskApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DFD/EzVask/EzVaskApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/web/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/web/src/app/app.module.ts" afterDir="false" />
-    </list>
+    <list default="true" id="8c2ddcee-e4a2-40e7-9872-700f23171183" name="Changes" comment="Calling server via Postman works, but not via Angular frontend. More investigation needed, but the IntelliJ debugger refuses to stop on breaks, and I've spent far too long trying to get it to work..." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681033867118</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Calling server via Postman works, but not via Angular frontend. More investigation needed, but the IntelliJ debugger refuses to stop on breaks, and I've spent far too long trying to get it to work...">
+      <created>1681161465811</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681161465811</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

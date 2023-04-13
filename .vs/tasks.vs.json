@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-EzVaskApplication",
+      "appliesTo": "src/main/java/com/DFD/EzVask/EzVaskApplication.java",
+      "type": "launch"
+    }
+  ]
+}

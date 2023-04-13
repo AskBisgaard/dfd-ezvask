@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { scheduled_pickup } from './scheduled-pickup';
+import { ScheduledPickup as ScheduledPickup } from './scheduledPickup';
 import { NgbDate, NgbDateAdapter, NgbDateStruct, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
-import { Observable, catchError, throwError } from 'rxjs';
+import { Observable, catchError, map, throwError } from 'rxjs';
 import { HttpErrorResponse, HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
@@ -13,32 +13,44 @@ import { HttpErrorResponse, HttpClient, HttpHeaders } from '@angular/common/http
 
 export class AppComponent {
   constructor(private http: HttpClient) {
-    this.http.get<String>('http://localhost:8080/').subscribe(response => {
-      debugger;
-      console.log(response);
+    this.http.get('http://localhost:8080/').subscribe(response => {
+      this.updatePickups(response);
     });
-  } 
+  }
+
+  scheduled_pickups:ScheduledPickup[] = [];
 
   headers = { 'content-type': 'application/json'}
   title = 'customerplatform';
   
-  new_pickup: scheduled_pickup = {
+  new_pickup: ScheduledPickup = {
     id: -1,
-    pickup_date: new NgbDate(new Date(Date.now()).getFullYear(), new Date(Date.now()).getMonth(), new Date(Date.now()).getDay()),
+    pickupDate: new NgbDate(new Date(Date.now()).getFullYear(), new Date(Date.now()).getMonth(), new Date(Date.now()).getDay()),
     weight: 0
   };
 
-  scheduled_pickups:scheduled_pickup[] =[
-    { id: 1, pickup_date: new NgbDate(2023, 4, 1), weight: 50 },
-    { id: 2, pickup_date: new NgbDate(2023, 5, 1), weight: 23 }
-  ];
 
-  schedulePickup(schedule_pickup: scheduled_pickup): void {
-    console.log(JSON.stringify(schedule_pickup));
-    this.http.post<scheduled_pickup>('http://localhost:8080/pickup', JSON.stringify(schedule_pickup), { headers: this.headers });
+  schedulePickup(schedulePickup: ScheduledPickup) {
+    console.log(JSON.stringify(schedulePickup));
+    this.http.post('http://localhost:8080/pickup', {"id":-1,"pickupDate":{"year":2023,"month":3,"day":0},"weight":0},{'headers':this.headers, responseType: 'text'}).subscribe(response => {
+      this.updatePickups(response);
+    });
   };
 
-  cancelPickup(scheduled_pickup: scheduled_pickup): void {
+  cancelPickup(scheduled_pickup: ScheduledPickup) {
     console.log('Remove pickup: %d', scheduled_pickup.id)
+    this.http.delete(`http://localhost:8080/cancel/${scheduled_pickup.id}`).subscribe(response => {
+      this.updatePickups(response);
+    });
   };
+
+  updatePickups(obj: Object) {
+    this.scheduled_pickups = [];
+
+    Object.entries(obj)
+    .forEach(([key, value]) => {
+      let pickup = value as ScheduledPickup;
+      this.scheduled_pickups.push(pickup);
+    });
+  }
 }

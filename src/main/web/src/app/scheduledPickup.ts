@@ -1,7 +1,7 @@
 import {NgbDate} from '@ng-bootstrap/ng-bootstrap';
 
-export interface scheduled_pickup {
+export interface ScheduledPickup {
     id: number;
-    pickup_date: NgbDate;
+    pickupDate: NgbDate;
     weight: number;
 }
