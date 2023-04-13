@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c2ddcee-e4a2-40e7-9872-700f23171183" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DFD/EzVask/CustomerPlatformController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DFD/EzVask/Pickup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8c2ddcee-e4a2-40e7-9872-700f23171183" name="Changes" comment="Calling server via Postman works, but not via Angular frontend. More investigation needed, but the IntelliJ debugger refuses to stop on breaks, and I've spent far too long trying to get it to work..." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="initial_rest" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,6 +42,9 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
@@ -54,8 +53,16 @@
       <recent name="com.DFD.EzVask" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="EzVask [spring-boot:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+  <component name="RunManager" selected="Maven.EzVask [spring-boot:run...]">
+    <configuration name="All in EzVask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="EzVask" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EzVask [spring-boot:run...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -67,6 +74,7 @@
             <option name="goals">
               <list>
                 <option value="spring-boot:run" />
+                <option value="-Dspring.profiles.active=dev" />
               </list>
             </option>
             <option name="pomFileName" />
@@ -80,6 +88,15 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JUnit.All in EzVask" />
+      <item itemvalue="Maven.EzVask [spring-boot:run...]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in EzVask" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -90,6 +107,21 @@
       <option name="presentableId" value="Default" />
       <updated>1680947837007</updated>
     </task>
+    <task id="LOCAL-00001" summary="Layout">
+      <created>1681033867118</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681033867118</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Calling server via Postman works, but not via Angular frontend. More investigation needed, but the IntelliJ debugger refuses to stop on breaks, and I've spent far too long trying to get it to work...">
+      <created>1681161465811</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681161465811</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,7 +135,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="Interface" />
                       </list>
                     </value>
                   </entry>
@@ -115,15 +147,9 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/DFD/EzVask/CustomerPlatformController.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Layout" />
+    <MESSAGE value="Calling server via Postman works, but not via Angular frontend. More investigation needed, but the IntelliJ debugger refuses to stop on breaks, and I've spent far too long trying to get it to work..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Calling server via Postman works, but not via Angular frontend. More investigation needed, but the IntelliJ debugger refuses to stop on breaks, and I've spent far too long trying to get it to work..." />
   </component>
 </project>

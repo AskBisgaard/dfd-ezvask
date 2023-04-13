@@ -1,3 +1,3 @@
 package com.DFD.EzVask;
 
-public record Pickup(String content) { }
+public record Pickup(long id, PickupDate pickupDate, long weight) {}
